@@ -24,6 +24,13 @@ pub fn main() !void {
 
     // Calculate prime numbers until a user given number,
     // and return total number of prime number exists
+    //
+    // Actually written to test between zig's different release modes
+    // (ReleaseFast, ReleaseSafe, ReleaseSmall)
+    // Finding was surprising since ReleaseSmall and ReleaseFast has been
+    // giving similar running time with ReleaseSafe is 2 seconds slower
+    //
+    // MAYBE THIS TEST IS A BAD EXAMPLE!!!!
     const x: i32 = 10000000;
     var i: i32 = 1;
     var total_primes: i32 = 0;
